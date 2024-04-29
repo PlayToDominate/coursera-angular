@@ -43,7 +43,7 @@ function ShoppingListCheckOffService() {
     //   name: buyItems[itemIndex].name,
     //   quantity: buyItems[itemIndex].quantity
     // };
-    var item = buyItems(itemIndex);
+    var item = buyItems[itemIndex];
     boughtItems.push(item);
     buyItems.splice(itemIndex, 1);
   };
