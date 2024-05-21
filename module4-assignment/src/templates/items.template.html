@@ -1,0 +1,12 @@
+<!-- <div>Name: {{ itemDetail.name }}</div>
+<div>Short Name: {{ itemDetail.short_name }}</div>
+<div>Special Instructions: {{ itemDetail.special_instructions }}</div> -->
+<!-- <ui-view></ui-view> -->
+<!-- <div>items.template.html</div> -->
+<!-- <item-detail items="itemDetail.items"></item-detail> -->
+<!-- <items-controller items="itemsController.menuOptions"></items-controller> -->
+<ul>
+  <li ng-repeat="item in itemsController.menuOptions">
+        {{ item.name }}: {{ item.price_large }}<br />{{ item.description }}
+  </li>
+</ul>
