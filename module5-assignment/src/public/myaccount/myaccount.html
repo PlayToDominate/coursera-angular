@@ -1,0 +1,15 @@
+<h1>My Information</h1>
+<div ng-show="myAccountCtrl.signedUp">
+    <h1>Showing information for user.</h1>
+    <p>First name: {{myAccountCtrl.user.firstname}}</p>
+    <p>Last name: {{myAccountCtrl.user.lastname}}</p>
+    <p>Email: {{myAccountCtrl.user.email}}</p>
+    <p>Phone: {{myAccountCtrl.user.phone}}</p>
+    <p>Favorite dish: {{myAccountCtrl.user.favoriteDishDetails.name}}</p>
+    <p>{{myAccountCtrl.user.favoriteDishDetails.description}}</p>
+
+</div>
+
+<div ng-hide="myAccountCtrl.signedUp">
+    <h1>You need to signup first. <a class="btn btn-default" ui-sref="public.signup">Signup now!</a></h1>
+</div>
