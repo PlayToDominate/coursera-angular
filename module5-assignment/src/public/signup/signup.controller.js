@@ -18,8 +18,12 @@ function SignupController($scope,SignupService) {
       } else {
         signupCtrl.user.favoriteDishDetails = response.data;
         console.log('SignupController favoriteDish: ',signupCtrl.user.favoriteDish);
+        var favoriteDishCategory = signupCtrl.user.favoriteDish.substring(0,1);
+        signupCtrl.user.favoriteDishCategory = favoriteDishCategory;
+        console.log('SignupController favoriteDishCategory: ',signupCtrl.user.favoriteDishCategory);
         SignupService.setUser(signupCtrl.user);
         signupCtrl.showMessage = true;
+        signupCtrl.showError = false;
       }
     }, function(error) {
       console.log(error);
